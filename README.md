@@ -27,9 +27,14 @@ npm install
 
 Create a `.env` file in the project root (do not commit secrets):
 
+
 ```env
 PORT=3000
-DATABASE_URL=postgresql://USER:PASSWORD@localhost:5432/jwt_auth
+DB_USER=danieltzul
+DB_HOST=localhost
+DB_NAME=jwt_auth
+DB_PASSWORD=
+DB_PORT=5432
 JWT_SECRET=replace_with_a_long_random_string
 ```
 
@@ -39,7 +44,7 @@ JWT_SECRET=replace_with_a_long_random_string
 npm start
 ```
 
-> Note: if you keep using TypeScript (`.ts` files), you’ll need a runner like `tsx` or compile with `tsc` first. Plain `node file.ts` won’t work for real TypeScript code.
+> Uses `tsx` to run TypeScript directly. 
 
 ## Planned endpoints
 
